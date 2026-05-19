@@ -1,0 +1,27 @@
+# LAR — Layered Agentic Retrieval
+
+> A publisher-side architectural pattern for declaring agent-navigable web surfaces. This repository hosts the open community process for the LAR v0.1 specification and reference examples.
+
+## Working paper
+
+- [Marinoni Moretto (2026), v4.6 working paper](https://github.com/lar-spec/lar/blob/main/README.md#working-paper): the architectural claim and v0.1 baseline scope
+
+## Specification
+
+- [JSON Schema (draft-07)](https://raw.githubusercontent.com/lar-spec/lar/main/schemas/lar.schema.json): canonical lar.json structure
+- [CHANGELOG](https://github.com/lar-spec/lar/blob/main/CHANGELOG.md): paper-anchored vs exploratory scope tracking
+
+## Reference examples
+
+- [E-commerce — Pelletteria Vanelli](https://github.com/lar-spec/lar/tree/main/examples/ecommerce/vanelli): composite Florentine leather goods merchant, ~80 SKUs
+- [Nonprofit — Fondazione Restauro Brunelleschi](https://github.com/lar-spec/lar/tree/main/examples/nonprofit/restauro): composite heritage-restoration foundation
+
+## Self-demonstrating surface
+
+- [/lar.json](https://github.com/lar-spec/lar/blob/main/lar.json): this repository's own LAR manifest. The repo treats its specification artifacts as a publication surface and exposes them through the canonical structure it documents.
+
+## Process
+
+- [CONTRIBUTING](https://github.com/lar-spec/lar/blob/main/CONTRIBUTING.md): how to engage with this proposal
+- [Issues](https://github.com/lar-spec/lar/issues): refinement proposals and feedback, organized by the working paper's §8 open-question categories
+- [LICENSE](https://github.com/lar-spec/lar/blob/main/LICENSE): Apache 2.0 for code, schemas, and examples

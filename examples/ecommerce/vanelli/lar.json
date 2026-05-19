@@ -1,0 +1,38 @@
+{
+  "lar_version": "0.1",
+  "publisher": {
+    "name": "Pelletteria Vanelli",
+    "domain": "vanelli.example",
+    "legal_entity_id": "IT01234567890"
+  },
+  "identity": "/lar/about.md",
+  "catalog": "/lar/catalog.json",
+  "current_state": {
+    "availability": "/lar/availability.json",
+    "pricing": "/lar/pricing.json",
+    "shipping": "/lar/shipping.json"
+  },
+  "context": {
+    "catalog_overview": "/lar/catalog.md",
+    "craft_and_materials": "/lar/craft.md"
+  },
+  "operations": {
+    "checkout": {
+      "endpoint": "https://api.vanelli.example/checkout",
+      "protocol": "UCP",
+      "spec": "https://api.vanelli.example/checkout/openapi.json"
+    }
+  },
+  "policies": {
+    "terms": "/lar/policies.md#terms",
+    "returns": "/lar/policies.md#returns",
+    "privacy": "/lar/policies.md#privacy",
+    "shipping": "/lar/policies.md#shipping"
+  },
+  "attestation": {
+    "method": "HTTPMessageSignature",
+    "timestamp": "2026-05-18T09:00:00Z",
+    "signature": "EXAMPLE_ILLUSTRATIVE_SIGNATURE_NOT_VERIFIABLE",
+    "public_key_uri": "https://vanelli.example/.well-known/lar-pubkey.pem"
+  }
+}

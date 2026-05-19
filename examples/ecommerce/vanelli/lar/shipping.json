@@ -1,0 +1,73 @@
+{
+  "as_of": "2026-05-18T09:00:00Z",
+  "freshness_window_minutes": 1440,
+  "currency": "EUR",
+  "vat_included": true,
+  "origin": { "country": "IT", "city": "Florence" },
+  "zone_resolution": "Match destination ISO 3166-1 alpha-2 code against each zone's country_codes in array order. The 'rest_of_world' zone uses '*' as a catch-all.",
+  "zones": [
+    {
+      "id": "italy",
+      "label": "Italy",
+      "country_codes": ["IT"],
+      "rates": {
+        "standard": { "price_eur": 12.00, "transit_business_days_min": 5, "transit_business_days_max": 7 },
+        "express":  { "price_eur": 22.00, "transit_business_days_min": 2, "transit_business_days_max": 3 }
+      }
+    },
+    {
+      "id": "eu_excl_italy",
+      "label": "EU (excl. Italy)",
+      "country_codes": ["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE"],
+      "rates": {
+        "standard": { "price_eur": 22.00, "transit_business_days_min": 5, "transit_business_days_max": 7 },
+        "express":  { "price_eur": 38.00, "transit_business_days_min": 2, "transit_business_days_max": 3 }
+      }
+    },
+    {
+      "id": "ch_uk_no",
+      "label": "Switzerland / United Kingdom / Norway",
+      "country_codes": ["CH", "GB", "NO"],
+      "rates": {
+        "standard": { "price_eur": 32.00, "transit_business_days_min": 5, "transit_business_days_max": 7 },
+        "express":  { "price_eur": 55.00, "transit_business_days_min": 2, "transit_business_days_max": 3 }
+      }
+    },
+    {
+      "id": "north_america",
+      "label": "North America",
+      "country_codes": ["US", "CA", "MX"],
+      "rates": {
+        "standard": { "price_eur": 45.00, "transit_business_days_min": 5, "transit_business_days_max": 7 },
+        "express":  { "price_eur": 78.00, "transit_business_days_min": 2, "transit_business_days_max": 3 }
+      }
+    },
+    {
+      "id": "rest_of_world",
+      "label": "Rest of world",
+      "country_codes": ["*"],
+      "rates": {
+        "standard": { "price_eur": 65.00, "transit_business_days_min": 5, "transit_business_days_max": 7 },
+        "express":  { "price_eur": 110.00, "transit_business_days_min": 2, "transit_business_days_max": 3 }
+      }
+    }
+  ],
+  "insurance": {
+    "included": true,
+    "coverage": "full_retail_value",
+    "claim_window_days": 14,
+    "claim_contact": "shipping@vanelli.example"
+  },
+  "customs_and_duties": {
+    "buyer_responsible_outside_eu": true,
+    "collected_at_checkout": false
+  },
+  "denied_destinations": {
+    "country_codes": ["KP", "IR", "SY", "CU"],
+    "snapshot_date": "2026-05-18",
+    "authority_reference": "https://www.sanctionsmap.eu/",
+    "policy_reference": "/lar/policies.md#terms",
+    "note": "Inline country_codes is a publisher snapshot of jurisdictions ineligible for shipment under EU/Italian export controls current as of snapshot_date. Agents SHOULD treat the snapshot as advisory and resolve authority_reference (or an equivalent authoritative source) before committing a transaction to any destination outside the publisher's established eligible regions."
+  },
+  "narrative_reference": "/lar/policies.md#shipping"
+}

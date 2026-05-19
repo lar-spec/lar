@@ -1,0 +1,166 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/lar-spec/lar/raw/main/schemas/lar.schema.json",
+  "title": "Layered Agentic Retrieval (LAR) Manifest",
+  "description": "Root discovery document declaring agent-navigable surfaces, capabilities, and institutional attestations. This is a draft proposal (v0.1) under active community refinement; the schema, protocol enumerations, and attestation block are all subject to change.",
+  "type": "object",
+  "required": ["lar_version", "publisher", "identity"],
+  "properties": {
+    "lar_version": {
+      "type": "string",
+      "description": "Version of the LAR specification (e.g., '0.1').",
+      "examples": ["0.1"]
+    },
+    "publisher": {
+      "type": "object",
+      "required": ["name", "domain"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Operating name of the publishing institution."
+        },
+        "domain": {
+          "type": "string",
+          "format": "hostname",
+          "description": "Primary domain under which the LAR surface is published."
+        },
+        "legal_entity_id": {
+          "type": "string",
+          "description": "Optional LEI, GS1 GLN, or local tax identifier for compliance and disambiguation."
+        }
+      }
+    },
+    "identity": {
+      "type": "string",
+      "format": "uri-reference",
+      "description": "URI to the root Markdown document containing institutional identity, brand context, and narrative."
+    },
+    "catalog": {
+      "type": "string",
+      "format": "uri-reference",
+      "description": "URI to the static product/service catalog. Prefer JSON when per-item attributes are structured (dimensions, SKUs, variant axes); use Markdown when the catalog is narrative-led. Typical paths: /lar/catalog.json or /lar/catalog/index.md."
+    },
+    "current_state": {
+      "type": "object",
+      "description": "Pointers to volatile state endpoints or files (availability, pricing, shipping, hours). These are expected to be refreshed by the publisher independently of the manifest itself.",
+      "properties": {
+        "availability": {
+          "type": "string",
+          "format": "uri-reference",
+          "description": "URI to availability/inventory data, typically JSON."
+        },
+        "pricing": {
+          "type": "string",
+          "format": "uri-reference",
+          "description": "URI to current pricing data, typically JSON."
+        },
+        "shipping": {
+          "type": "string",
+          "format": "uri-reference",
+          "description": "URI to structured shipping cost/transit data, typically JSON. Pairs with policies.shipping which carries the narrative version."
+        }
+      }
+    },
+    "operations": {
+      "type": "object",
+      "description": "Declared transactional or action endpoints authorized by the publisher. Each key is the operation name; each value declares the endpoint, the protocol it expects, and optionally a payload specification.",
+      "patternProperties": {
+        "^[a-zA-Z0-9_-]+$": {
+          "type": "object",
+          "required": ["endpoint", "protocol"],
+          "properties": {
+            "endpoint": {
+              "type": "string",
+              "format": "uri-reference",
+              "description": "URI of the operational endpoint."
+            },
+            "protocol": {
+              "type": "string",
+              "description": "The execution protocol the endpoint expects. The enumeration below is non-exhaustive and provisional; new protocols may be added as the ecosystem matures. Use 'Other' (with a free-form note in 'spec' or out-of-band documentation) for protocols not yet enumerated.",
+              "enum": ["ACP", "UCP", "MCP", "WebMCP", "A2A", "OpenAPI", "Proprietary", "Other"]
+            },
+            "spec": {
+              "type": "string",
+              "format": "uri-reference",
+              "description": "Optional URI to OpenAPI/Swagger spec, protocol manifest, or other detailed endpoint payload documentation."
+            }
+          }
+        }
+      }
+    },
+    "impact": {
+      "type": "string",
+      "format": "uri-reference",
+      "description": "Optional URI to structured per-program or per-project effectiveness data, typically JSON. Intended for publishers declaring structured effectiveness data that agents may evaluate independently of compliance or financial-health status — nonprofit per-program outcomes, per-project completion metrics, programmatic survival rates, training-program placement outcomes, or analogous effectiveness reporting in any sector. Typically omitted by commerce publishers. Pairs with any narrative companion declared in `context` (e.g., `impact_reporting`). Consumed by donor agents, grantmaking platforms, DAF screening systems, and any agent evaluating effectiveness rather than financial health alone."
+    },
+    "policies": {
+      "type": "object",
+      "description": "URIs to governing policies under which operations are authorized. Agents performing operations should resolve these prior to committing transactions.",
+      "properties": {
+        "terms": { "type": "string", "format": "uri-reference" },
+        "returns": { "type": "string", "format": "uri-reference" },
+        "privacy": { "type": "string", "format": "uri-reference" },
+        "shipping": { "type": "string", "format": "uri-reference" }
+      }
+    },
+    "validators": {
+      "type": "object",
+      "description": "Optional map of third-party trust anchors that independently attest to some aspect of the publisher's legitimacy, governance, fiscal status, or programmatic oversight. Keys are publisher-chosen names (lowercase snake_case); values are validator records. This block exists so that publisher-side declaration (the rest of the LAR surface) is anchored to authorities that an agent can cross-check, addressing the trust gap that pure self-publishing leaves open. For US nonprofits this typically points to Candid, Charity Navigator, GiveWell, BBB Wise Giving Alliance, IRS records; for European nonprofits to national registries (RUNTS in Italy, Charity Commission in the UK, RNA in France, ANBI in the Netherlands) plus jurisdiction-specific audit/oversight bodies; for commerce publishers to LEI, GS1 GLN, consortium memberships, or sector-specific certifications.",
+      "patternProperties": {
+        "^[a-z][a-z0-9_]*$": {
+          "type": "object",
+          "description": "A single validator record. Required: `name` (human-readable validator name) and `authority` (the issuing institution). Recommended: `id` (publisher's identifier within the validator system), `registry_uri` (where to verify), `as_of` (snapshot date), `machine_queryable` (boolean indicating whether the registry exposes a public API agents can query directly). Additional free-form fields are permitted.",
+          "properties": {
+            "name": { "type": "string" },
+            "authority": { "type": "string" },
+            "id": { "type": "string" },
+            "registry_uri": { "type": "string", "format": "uri-reference" },
+            "as_of": { "type": "string", "format": "date" },
+            "machine_queryable": { "type": "boolean" },
+            "status": { "type": "string" },
+            "note": { "type": "string" }
+          },
+          "required": ["name", "authority"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "context": {
+      "type": "object",
+      "description": "Optional map of supplementary narrative (typically Markdown) leaves intended for research-mode agent queries that the structured leaves cannot answer cleanly — e.g., catalog overview prose, craft/process description, care guidance, design rationale. Keys are publisher-chosen names (lowercase snake_case); values are URI references. `identity` remains the canonical institutional narrative as a separate top-level field; `context` is for complementary leaves.",
+      "patternProperties": {
+        "^[a-z][a-z0-9_]*$": {
+          "type": "string",
+          "format": "uri-reference"
+        }
+      },
+      "additionalProperties": false
+    },
+    "attestation": {
+      "type": ["object", "null"],
+      "description": "EXPERIMENTAL. Cryptographic signature verifying the integrity and authorization of the manifest. The trust model, signing scope (manifest only vs. entire linked tree), and revocation semantics are open questions. Implementers should treat the attestation block as exploratory and consult legal counsel for production use.",
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": ["WebBotAuth", "HTTPMessageSignature"],
+          "description": "Signing primitive. Web Bot Auth and HTTP Message Signatures (RFC 9421) are the two currently considered."
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp of when the manifest was signed."
+        },
+        "signature": {
+          "type": "string",
+          "description": "The signature value, encoded per the method's specification."
+        },
+        "public_key_uri": {
+          "type": "string",
+          "format": "uri",
+          "description": "URI to the public key used for signature verification."
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

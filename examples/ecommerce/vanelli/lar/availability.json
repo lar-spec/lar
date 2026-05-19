@@ -1,0 +1,58 @@
+{
+  "as_of": "2026-05-18T09:00:00Z",
+  "freshness_window_minutes": 15,
+  "inventory": {
+    "VN-HB-001": {
+      "inventory_model": "by_color",
+      "in_stock_by_color": {
+        "Cognac": 3,
+        "Black": 5,
+        "Forest Green": 0,
+        "Burgundy": 2
+      },
+      "production_lead_time_days_if_out_of_stock": 35
+    },
+    "VN-HB-002": {
+      "inventory_model": "by_color",
+      "in_stock_by_color": {
+        "Cognac": 2,
+        "Black": 4,
+        "Cream": 1,
+        "Navy": 0
+      },
+      "production_lead_time_days_if_out_of_stock": 35
+    },
+    "VN-HB-003": {
+      "inventory_model": "by_color",
+      "in_stock_by_color": {
+        "Cognac": 1,
+        "Black": 2
+      },
+      "production_lead_time_days_if_out_of_stock": 49
+    },
+    "VN-SLG-001": {
+      "inventory_model": "by_color",
+      "in_stock_by_color": {
+        "Cognac": 12,
+        "Black": 15,
+        "Burgundy": 6,
+        "Navy": 4
+      },
+      "production_lead_time_days_if_out_of_stock": 18
+    },
+    "VN-SLG-002": {
+      "inventory_model": "made_to_order",
+      "in_stock_total": 24,
+      "color_policy": "any_cowhide_color_on_request",
+      "production_lead_time_days_if_out_of_stock": 18
+    },
+    "VN-SLG-003": {
+      "inventory_model": "by_color",
+      "in_stock_by_color": {
+        "Cognac": 8,
+        "Black": 11
+      },
+      "production_lead_time_days_if_out_of_stock": 18
+    }
+  }
+}

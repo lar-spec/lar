@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Higher-level architectural discussion
+    url: https://github.com/lar-spec/lar/discussions
+    about: For broader questions about the LAR pattern, use case explorations, and implementation experiences, use Discussions rather than Issues.
+  - name: Direct contact
+    url: mailto:francesco.marinoni.moretto@gmail.com
+    about: For private inquiries outside the public tracker.

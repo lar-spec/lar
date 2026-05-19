@@ -1,0 +1,89 @@
+{
+  "as_of": "2026-05-18T09:00:00Z",
+  "freshness_window_minutes": 1440,
+  "currency": "EUR",
+  "vocabularies": {
+    "note": "Closed sets used across the program catalog. Agents indexing or filtering should treat these as the authoritative value space for the named fields.",
+    "program_types": [
+      "capital_restoration_project",
+      "ongoing_conservation_program",
+      "training_and_education_program"
+    ],
+    "statuses": [
+      "fundraising",
+      "in_progress",
+      "completed",
+      "on_hold"
+    ],
+    "heritage_categories": [
+      "architectural",
+      "fresco",
+      "panel_painting",
+      "sculpture",
+      "manuscript",
+      "civic_structure"
+    ]
+  },
+  "programs": [
+    {
+      "program_id": "RB-CHIESA-SAN-NICCOLO",
+      "name": "Restauro facciata Chiesa di San Niccolò Oltrarno",
+      "type": "capital_restoration_project",
+      "heritage_categories": ["architectural"],
+      "description": "Full stone restoration of the 13th-century facade of San Niccolò Oltrarno, including consolidation of the pietra forte cladding, replacement of failed iron tie rods, and conservation of the surviving portal sculpture. Project supervised by the Soprintendenza Archeologia Belle Arti e Paesaggio per la città metropolitana di Firenze.",
+      "location": { "city": "Florence", "neighborhood": "Oltrarno", "country": "IT" },
+      "scope": [
+        "stone_consolidation",
+        "iron_tie_rod_replacement",
+        "portal_sculpture_conservation"
+      ],
+      "target_funding_eur": 450000,
+      "expected_duration_months": 18,
+      "status": "fundraising",
+      "lead_restorer_credential": "Restauratore di Beni Culturali (D.M. 86/2009)",
+      "live_campaign_in": "/lar/campaigns.json"
+    },
+    {
+      "program_id": "RB-AFFRESCO-CAPPELLA-MARTELLI",
+      "name": "Conservazione affreschi Cappella Martelli",
+      "type": "capital_restoration_project",
+      "heritage_categories": ["fresco"],
+      "description": "Conservation treatment of the Filippo Lippi school fresco cycle in the Cappella Martelli, San Lorenzo. Treatment includes salt extraction, consolidation of detached intonaco, and reintegration of lacunae using reversible techniques per current Opificio delle Pietre Dure protocols.",
+      "location": { "city": "Florence", "site": "San Lorenzo, Cappella Martelli", "country": "IT" },
+      "scope": [
+        "salt_extraction",
+        "intonaco_consolidation",
+        "reversible_lacuna_reintegration"
+      ],
+      "target_funding_eur": 120000,
+      "expected_duration_months": 9,
+      "status": "fundraising",
+      "lead_restorer_credential": "Restauratore di Beni Culturali (D.M. 86/2009)",
+      "live_campaign_in": "/lar/campaigns.json"
+    },
+    {
+      "program_id": "RB-FORMAZIONE-RESTAURATORI",
+      "name": "Borse di formazione per giovani restauratori",
+      "type": "training_and_education_program",
+      "heritage_categories": [],
+      "description": "Annual scholarship program funding four placements per cohort for graduates of Italian restoration schools (Opificio delle Pietre Dure, Istituto Centrale per il Restauro, accredited equivalents) on active restoration sites coordinated by the foundation. Scholarships cover stipend, materials, and site supervision for a 12-month placement.",
+      "location": { "country": "IT" },
+      "scope": [
+        "stipend_for_12_month_placement",
+        "materials_allowance",
+        "supervised_site_experience"
+      ],
+      "target_funding_eur": 80000,
+      "expected_duration_months": 12,
+      "status": "fundraising",
+      "recurrence": "annual_cohort",
+      "live_campaign_in": "/lar/campaigns.json"
+    }
+  ],
+  "notes": {
+    "live_state": "Real-time fundraising progress per program is published in /lar/campaigns.json and updated hourly.",
+    "narrative_overview": "For a research-mode overview of how programs relate and how a donor might choose between them, see /lar/programs.md.",
+    "impact_reporting": "For prior-program impact narrative see /lar/impact.md.",
+    "bespoke_or_advised_giving": "Major-donor advised giving (single contributions above EUR 25,000) is coordinated outside the standard donate endpoint. Contact major-gifts@restaurobrunelleschi.example."
+  }
+}

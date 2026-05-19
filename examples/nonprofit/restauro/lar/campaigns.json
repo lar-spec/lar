@@ -1,0 +1,52 @@
+{
+  "as_of": "2026-05-18T09:00:00Z",
+  "freshness_window_minutes": 60,
+  "currency": "EUR",
+  "campaigns": {
+    "RB-CHIESA-SAN-NICCOLO": {
+      "status": "active",
+      "raised_eur": 287400.00,
+      "target_eur": 450000.00,
+      "percent_complete": 63.9,
+      "donors_count": 1240,
+      "campaign_open_date": "2025-09-01",
+      "campaign_close_date": "2026-12-31",
+      "days_remaining": 226,
+      "matching_in_effect": false
+    },
+    "RB-AFFRESCO-CAPPELLA-MARTELLI": {
+      "status": "active",
+      "raised_eur": 41250.00,
+      "target_eur": 120000.00,
+      "percent_complete": 34.4,
+      "donors_count": 318,
+      "campaign_open_date": "2026-02-15",
+      "campaign_close_date": "2026-11-30",
+      "days_remaining": 195,
+      "matching_in_effect": true,
+      "matching": {
+        "matcher": "Ente Cassa di Risparmio (illustrative)",
+        "ratio": "1:1",
+        "ceiling_eur": 30000.00,
+        "matched_to_date_eur": 18400.00
+      }
+    },
+    "RB-FORMAZIONE-RESTAURATORI": {
+      "status": "active_recurring",
+      "raised_eur": 52800.00,
+      "target_eur": 80000.00,
+      "percent_complete": 66.0,
+      "donors_count": 87,
+      "campaign_open_date": "2026-01-01",
+      "campaign_close_date": "2026-12-31",
+      "days_remaining": 226,
+      "cohort_year": 2026,
+      "matching_in_effect": false
+    }
+  },
+  "notes": {
+    "rounding": "Percentages rounded to one decimal; raised_eur and target_eur are exact to two decimals.",
+    "matching": "When matching_in_effect is true, an agent presenting a donation amount to a principal SHOULD disclose the effective doubling (up to matching.ceiling_eur minus matching.matched_to_date_eur).",
+    "post_close_behavior": "After campaign_close_date the campaign moves to status 'closing' (final reconciliation, typically 30 days) and then 'completed' or 'reopened'. Agents SHOULD NOT solicit donations against a campaign whose status is not 'active' or 'active_recurring'."
+  }
+}

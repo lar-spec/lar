@@ -1,0 +1,80 @@
+{
+  "lar_version": "0.1",
+  "publisher": {
+    "name": "Fondazione Restauro Brunelleschi",
+    "domain": "restaurobrunelleschi.example",
+    "legal_entity_id": "IT12345678901"
+  },
+  "identity": "/lar/about.md",
+  "catalog": "/lar/programs.json",
+  "current_state": {
+    "campaigns": "/lar/campaigns.json"
+  },
+  "impact": "/lar/impact.json",
+  "context": {
+    "programs_overview": "/lar/programs.md",
+    "impact_reporting": "/lar/impact.md"
+  },
+  "operations": {
+    "donate": {
+      "endpoint": "https://api.restaurobrunelleschi.example/donate",
+      "protocol": "OpenAPI",
+      "spec": "https://api.restaurobrunelleschi.example/donate/openapi.json"
+    },
+    "volunteer_signup": {
+      "endpoint": "https://api.restaurobrunelleschi.example/volunteer",
+      "protocol": "OpenAPI",
+      "spec": "https://api.restaurobrunelleschi.example/volunteer/openapi.json"
+    }
+  },
+  "policies": {
+    "terms": "/lar/policies.md#donor-terms",
+    "privacy": "/lar/policies.md#privacy",
+    "returns": "/lar/policies.md#refunds-and-cancellation"
+  },
+  "validators": {
+    "runts": {
+      "name": "Registro Unico Nazionale del Terzo Settore",
+      "authority": "Ministero del Lavoro e delle Politiche Sociali (Italian Republic)",
+      "id": "RUNTS-FI-2019-99999",
+      "registry_uri": "https://servizi.lavoro.gov.it/runts/it-it/Lista-enti",
+      "machine_queryable": false,
+      "as_of": "2026-05-18",
+      "note": "RUNTS does not currently expose a public per-entity API. The registry_uri points to the registry's public search interface; an agent must resolve the entity by id through the human-facing UI until a public API becomes available."
+    },
+    "ets_qualification": {
+      "name": "Ente del Terzo Settore",
+      "authority": "Italian Republic — Decreto Legislativo 117/2017",
+      "status": "active",
+      "tax_deductibility_jurisdiction": "Italy",
+      "as_of": "2026-05-18"
+    },
+    "annual_audit": {
+      "name": "Annual statutory audit",
+      "authority": "Italian Ministry of Economy and Finance — Registro dei Revisori Legali",
+      "audit_type": "revisore_legale",
+      "auditor_name": "Studio Revisori Associati S.t.p. (illustrative)",
+      "most_recent_fiscal_year_audited": 2025,
+      "findings": "unqualified_opinion",
+      "report_available_on_request": "transparency@restaurobrunelleschi.example"
+    },
+    "soprintendenza_oversight": {
+      "name": "Per-project authorization and post-treatment review",
+      "authority": "Soprintendenza Archeologia Belle Arti e Paesaggio per la città metropolitana di Firenze",
+      "scope": "Per-project authorization and post-treatment review for all capital restoration projects undertaken by the foundation.",
+      "applies_to_active_programs": ["RB-CHIESA-SAN-NICCOLO", "RB-AFFRESCO-CAPPELLA-MARTELLI"],
+      "applies_to_completed_projects": "all — see /lar/impact.json#completed_projects"
+    },
+    "civic_oversight": {
+      "name": "Civic appointee on foundation board",
+      "authority": "Comune di Firenze",
+      "scope": "Civic appointee occupies one of seven board seats per the foundation's statute (D.Lgs. 117/2017 compliant governance structure)."
+    }
+  },
+  "attestation": {
+    "method": "HTTPMessageSignature",
+    "timestamp": "2026-05-18T09:00:00Z",
+    "signature": "EXAMPLE_ILLUSTRATIVE_SIGNATURE_NOT_VERIFIABLE",
+    "public_key_uri": "https://restaurobrunelleschi.example/.well-known/lar-pubkey.pem"
+  }
+}

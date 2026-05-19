@@ -1,0 +1,20 @@
+{
+  "lar_version": "0.1",
+  "publisher": {
+    "name": "LAR Specification Working Group",
+    "domain": "github.com"
+  },
+  "identity": "/README.md",
+  "context": {
+    "specification": "/schemas/lar.schema.json",
+    "changelog": "/CHANGELOG.md",
+    "contributing": "/CONTRIBUTING.md",
+    "ecommerce_example": "/examples/ecommerce/vanelli/README.md",
+    "nonprofit_example": "/examples/nonprofit/restauro/README.md"
+  },
+  "operations": {},
+  "policies": {
+    "terms": "/LICENSE",
+    "contributing": "/CONTRIBUTING.md"
+  }
+}

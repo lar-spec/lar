@@ -1,0 +1,375 @@
+{
+  "as_of": "2026-05-18T09:00:00Z",
+  "freshness_window_minutes": 10080,
+  "currency": "EUR",
+  "reporting_period": { "from": "2019-01-01", "to": "2025-12-31" },
+  "vocabularies": {
+    "note": "Closed value sets for verification_status and evidence_quality. Agents weighting outcome claims SHOULD treat unverified or self_reported claims as weaker signal than soprintendenza_reviewed or peer-reviewed equivalents.",
+    "verification_status": [
+      "self_reported",
+      "soprintendenza_reviewed",
+      "soprintendenza_certified"
+    ],
+    "evidence_quality": [
+      "internal_monitoring_only",
+      "annual_survey_self_reported",
+      "soprintendenza_post_treatment_inspection",
+      "independent_methodology_publication",
+      "library_catalog_verified"
+    ]
+  },
+  "completed_projects": [
+    {
+      "project_id": "RB-SANTA-FELICITA-PORTALE",
+      "name": "Restauro portale Chiesa di Santa Felicita",
+      "type": "capital_restoration_project",
+      "heritage_categories": ["architectural"],
+      "location": { "city": "Florence", "site": "Chiesa di Santa Felicita", "country": "IT" },
+      "year_completed": 2020,
+      "duration_months": 14,
+      "funding": {
+        "target_eur": 180000.00,
+        "raised_eur": 180000.00,
+        "final_cost_eur": 180000.00,
+        "under_run_returned_to_reserves_eur": 0.00
+      },
+      "scope_completed": ["stone_consolidation", "portal_sculpture_conservation"],
+      "outcomes": [
+        {
+          "indicator": "treatment_completed_per_approved_protocol",
+          "value": true,
+          "unit": "boolean",
+          "verification_status": "soprintendenza_reviewed",
+          "evidence_quality": "soprintendenza_post_treatment_inspection"
+        },
+        {
+          "indicator": "stone_surface_treated",
+          "value": 120,
+          "unit": "square_meters",
+          "verification_status": "soprintendenza_reviewed",
+          "evidence_quality": "soprintendenza_post_treatment_inspection"
+        },
+        {
+          "indicator": "post_treatment_monitoring_years_with_no_consolidation_failure",
+          "value": 6,
+          "unit": "years",
+          "as_of": "2026-05-18",
+          "verification_status": "soprintendenza_reviewed",
+          "evidence_quality": "soprintendenza_post_treatment_inspection"
+        }
+      ],
+      "cost_per_outcome": {
+        "indicator": "cost_per_square_meter_restored",
+        "value": 1500.00,
+        "unit": "eur_per_square_meter"
+      },
+      "conservation_report_available_on_request": "transparency@restaurobrunelleschi.example"
+    },
+    {
+      "project_id": "RB-MAESTRO-DI-SIGNA",
+      "name": "Conservazione tavola dipinta Maestro di Signa",
+      "type": "capital_restoration_project",
+      "heritage_categories": ["panel_painting"],
+      "location": { "city": "Florence", "site": "private parish collection", "country": "IT" },
+      "year_completed": 2021,
+      "duration_months": 8,
+      "funding": {
+        "target_eur": 65000.00,
+        "raised_eur": 65000.00,
+        "final_cost_eur": 65000.00
+      },
+      "scope_completed": ["panel_consolidation", "paint_layer_conservation", "frame_stabilization"],
+      "outcomes": [
+        {
+          "indicator": "treatment_completed_per_approved_protocol",
+          "value": true,
+          "unit": "boolean",
+          "verification_status": "soprintendenza_reviewed",
+          "evidence_quality": "soprintendenza_post_treatment_inspection"
+        },
+        {
+          "indicator": "post_treatment_public_access_established",
+          "value": true,
+          "unit": "boolean",
+          "frequency": "two_sundays_per_month",
+          "verification_status": "soprintendenza_reviewed"
+        },
+        {
+          "indicator": "post_treatment_monitoring_years",
+          "value": 5,
+          "unit": "years",
+          "as_of": "2026-05-18",
+          "verification_status": "soprintendenza_reviewed"
+        }
+      ],
+      "conservation_report_available_on_request": "transparency@restaurobrunelleschi.example"
+    },
+    {
+      "project_id": "RB-SOFFIANO-LAPIDI",
+      "name": "Restauro lapidi cimitero monumentale Soffiano",
+      "type": "capital_restoration_project",
+      "heritage_categories": ["civic_structure"],
+      "location": { "city": "Florence", "site": "Cimitero monumentale di Soffiano", "country": "IT" },
+      "year_completed": 2022,
+      "duration_months": 11,
+      "funding": {
+        "target_eur": 95000.00,
+        "raised_eur": 95000.00,
+        "final_cost_eur": 86800.00,
+        "under_run_returned_to_reserves_eur": 8200.00
+      },
+      "scope_completed": ["stone_consolidation", "surface_cleaning", "inscription_legibility_restoration"],
+      "outcomes": [
+        {
+          "indicator": "monuments_treated",
+          "value": 3,
+          "unit": "count",
+          "verification_status": "soprintendenza_reviewed",
+          "evidence_quality": "soprintendenza_post_treatment_inspection"
+        },
+        {
+          "indicator": "treatment_completed_per_approved_protocol",
+          "value": true,
+          "unit": "boolean",
+          "verification_status": "soprintendenza_reviewed"
+        },
+        {
+          "indicator": "post_treatment_monitoring_years",
+          "value": 4,
+          "unit": "years",
+          "as_of": "2026-05-18",
+          "verification_status": "soprintendenza_reviewed"
+        }
+      ],
+      "cost_per_outcome": {
+        "indicator": "cost_per_monument_treated",
+        "value": 28933.33,
+        "unit": "eur_per_monument"
+      },
+      "notes": "Project under-ran target by EUR 8,200. Per the foundation statute and donor terms (/lar/policies.md#donor-terms), the surplus was directed to the foundation's reserves; designated donors were notified.",
+      "conservation_report_available_on_request": "transparency@restaurobrunelleschi.example"
+    },
+    {
+      "project_id": "RB-SAN-TOMMASO-AFFRESCHI",
+      "name": "Conservazione affreschi Oratorio di San Tommaso d'Aquino",
+      "type": "capital_restoration_project",
+      "heritage_categories": ["fresco"],
+      "location": { "city": "Florence", "site": "Oratorio di San Tommaso d'Aquino", "country": "IT" },
+      "year_completed": 2023,
+      "duration_months": 6,
+      "duration_months_planned": 9,
+      "funding": {
+        "target_eur": 220000.00,
+        "raised_eur": 220000.00,
+        "final_cost_eur": 220000.00
+      },
+      "scope_completed": ["salt_extraction", "intonaco_consolidation", "reversible_lacuna_reintegration"],
+      "outcomes": [
+        {
+          "indicator": "treatment_completed_per_approved_protocol",
+          "value": true,
+          "unit": "boolean",
+          "verification_status": "soprintendenza_certified",
+          "evidence_quality": "soprintendenza_post_treatment_inspection"
+        },
+        {
+          "indicator": "fresco_surface_treated",
+          "value": 80,
+          "unit": "square_meters",
+          "verification_status": "soprintendenza_certified"
+        },
+        {
+          "indicator": "methodology_peer_published",
+          "value": true,
+          "unit": "boolean",
+          "co_authors": "Opificio delle Pietre Dure",
+          "verification_status": "soprintendenza_certified",
+          "evidence_quality": "independent_methodology_publication"
+        },
+        {
+          "indicator": "post_treatment_monitoring_years_with_no_recurrence",
+          "value": 3,
+          "unit": "years",
+          "as_of": "2026-05-18",
+          "verification_status": "soprintendenza_certified"
+        }
+      ],
+      "cost_per_outcome": {
+        "indicator": "cost_per_square_meter_restored",
+        "value": 2750.00,
+        "unit": "eur_per_square_meter"
+      },
+      "conservation_report_available_on_request": "transparency@restaurobrunelleschi.example"
+    },
+    {
+      "project_id": "RB-SAN-FREDIANO-ARREDI",
+      "name": "Restauro arredi liturgici lignei Chiesa di San Frediano in Cestello",
+      "type": "capital_restoration_project",
+      "heritage_categories": ["sculpture"],
+      "location": { "city": "Florence", "site": "Chiesa di San Frediano in Cestello", "country": "IT" },
+      "year_completed": 2024,
+      "duration_months": 13,
+      "funding": {
+        "target_eur": 140000.00,
+        "raised_eur": 140000.00,
+        "final_cost_eur": 140000.00
+      },
+      "scope_completed": ["wood_consolidation", "paint_layer_conservation", "hardware_restoration"],
+      "outcomes": [
+        {
+          "indicator": "treatment_completed_per_approved_protocol",
+          "value": true,
+          "unit": "boolean",
+          "verification_status": "soprintendenza_reviewed",
+          "evidence_quality": "soprintendenza_post_treatment_inspection"
+        },
+        {
+          "indicator": "objects_treated",
+          "value": 12,
+          "unit": "count",
+          "notes": "Choir stall panels and two associated wooden liturgical structures.",
+          "verification_status": "soprintendenza_reviewed"
+        },
+        {
+          "indicator": "laser_cleaning_technique_co_funded",
+          "value": true,
+          "unit": "boolean",
+          "verification_status": "soprintendenza_reviewed",
+          "evidence_quality": "independent_methodology_publication"
+        },
+        {
+          "indicator": "post_treatment_monitoring_years",
+          "value": 2,
+          "unit": "years",
+          "as_of": "2026-05-18",
+          "verification_status": "soprintendenza_reviewed"
+        }
+      ],
+      "conservation_report_available_on_request": "transparency@restaurobrunelleschi.example"
+    },
+    {
+      "project_id": "RB-RICCARDIANA-MANOSCRITTI",
+      "name": "Conservazione manoscritti Biblioteca Riccardiana, fondo XV secolo",
+      "type": "capital_restoration_project",
+      "heritage_categories": ["manuscript"],
+      "location": { "city": "Florence", "site": "Biblioteca Riccardiana", "country": "IT" },
+      "year_completed": 2025,
+      "duration_months": 16,
+      "funding": {
+        "target_eur": 78000.00,
+        "raised_eur": 78000.00,
+        "final_cost_eur": 78000.00,
+        "raised_across_donor_cycles": 2
+      },
+      "scope_completed": ["paper_consolidation", "binding_repair", "digitization"],
+      "outcomes": [
+        {
+          "indicator": "treatment_completed_per_approved_protocol",
+          "value": true,
+          "unit": "boolean",
+          "verification_status": "soprintendenza_reviewed",
+          "evidence_quality": "soprintendenza_post_treatment_inspection"
+        },
+        {
+          "indicator": "manuscripts_treated",
+          "value": 12,
+          "unit": "count",
+          "verification_status": "soprintendenza_reviewed"
+        },
+        {
+          "indicator": "digital_surrogates_published_in_library_catalog",
+          "value": 12,
+          "unit": "count",
+          "verification_status": "soprintendenza_reviewed",
+          "evidence_quality": "library_catalog_verified",
+          "catalog_reference": "Biblioteca Riccardiana online catalog"
+        },
+        {
+          "indicator": "post_treatment_monitoring_years",
+          "value": 1,
+          "unit": "years",
+          "as_of": "2026-05-18",
+          "verification_status": "soprintendenza_reviewed"
+        }
+      ],
+      "cost_per_outcome": {
+        "indicator": "cost_per_manuscript_treated_and_digitized",
+        "value": 6500.00,
+        "unit": "eur_per_manuscript"
+      },
+      "conservation_report_available_on_request": "transparency@restaurobrunelleschi.example"
+    }
+  ],
+  "ongoing_programs": [
+    {
+      "program_id": "RB-FORMAZIONE-RESTAURATORI",
+      "name": "Borse di formazione per giovani restauratori",
+      "reporting_period": { "from": "2020-01-01", "to": "2025-12-31" },
+      "cohorts_completed": 6,
+      "outcomes_aggregate": [
+        {
+          "indicator": "placements_total",
+          "value": 24,
+          "unit": "count",
+          "verification_status": "self_reported",
+          "evidence_quality": "annual_survey_self_reported"
+        },
+        {
+          "indicator": "continued_employment_in_field",
+          "value": 18,
+          "as_proportion_of_placements": 0.750,
+          "unit": "count",
+          "verification_status": "self_reported",
+          "evidence_quality": "annual_survey_self_reported"
+        },
+        {
+          "indicator": "returned_to_academic_research_conservation_science",
+          "value": 4,
+          "as_proportion_of_placements": 0.167,
+          "unit": "count",
+          "verification_status": "self_reported",
+          "evidence_quality": "annual_survey_self_reported"
+        },
+        {
+          "indicator": "left_field_for_unrelated_reasons",
+          "value": 2,
+          "as_proportion_of_placements": 0.083,
+          "unit": "count",
+          "verification_status": "self_reported",
+          "evidence_quality": "annual_survey_self_reported"
+        }
+      ],
+      "cost_per_outcome": {
+        "indicator": "cost_per_placement_year",
+        "value": 20000.00,
+        "unit": "eur_per_placement_year",
+        "note": "Annual program target of EUR 80,000 funds four 12-month placements per cohort."
+      },
+      "notes": "Individual scholar outcomes are not published per the foundation's privacy commitment (/lar/policies.md#privacy). Only aggregate placement outcomes are reported."
+    }
+  ],
+  "aggregate": {
+    "completed_capital_projects_count": 6,
+    "completed_capital_projects_period": "2020-2025",
+    "total_funding_completed_projects_eur": 778000.00,
+    "total_surplus_returned_to_reserves_eur": 8200.00,
+    "training_cohorts_completed": 6,
+    "training_placements_total": 24,
+    "training_placements_period": "2020-2025"
+  },
+  "verification_methodology": {
+    "capital_projects": "Conservation reports for capital restoration projects are co-authored by the lead restorer (credentialed under D.M. 86/2009) and an independent reviewer from the relevant Soprintendenza or equivalent institution (Opificio delle Pietre Dure, Istituto Centrale per il Restauro). 'soprintendenza_reviewed' denotes a project whose post-treatment inspection was filed with the Soprintendenza without findings; 'soprintendenza_certified' denotes additional formal certification (typically associated with projects whose methodology was peer-published). Reports for individual projects are available on request to transparency@restaurobrunelleschi.example.",
+    "training_program": "Placement outcomes for the formazione restauratori program are collected through annual surveys of placement alumni. Response rate is high but not 100%; non-responding alumni are excluded from the denominator rather than assumed to fall into any category. Aggregate results are published; individual scholar outcomes are not published per the foundation's privacy commitment in /lar/policies.md#privacy."
+  },
+  "what_this_file_does_not_claim": [
+    "Permanence of restoration outcomes. Restoration is conservation, not preservation in perpetuity; every treated work continues to require monitoring and may need future intervention.",
+    "Higher programmatic-spend ratio than the audited figure. Most recent fiscal year actual: 87.4 percent; statutory minimum 85 percent.",
+    "Outcomes for non-responding training program alumni. The aggregate counts reflect only respondents to the annual survey.",
+    "Independent verification of cost-per-outcome metrics. Per-unit cost calculations are foundation-internal arithmetic from audited project budgets divided by reported physical outputs; no third party validates the divisor independently of the Soprintendenza review of the work itself."
+  ],
+  "narrative_companion": "/lar/impact.md",
+  "report_access_pattern": {
+    "current": "Conservation reports for individual completed projects are available on request to transparency@restaurobrunelleschi.example.",
+    "planned": "A future revision of this LAR surface may publish individual conservation reports as additional context leaves under /lar/reports/, indexed by project_id."
+  }
+}

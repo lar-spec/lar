@@ -1,0 +1,188 @@
+{
+  "as_of": "2026-05-18T09:00:00Z",
+  "freshness_window_minutes": 1440,
+  "currency_for_dimensions": "cm",
+  "currency_for_weight": "kg",
+  "vocabularies": {
+    "note": "Closed sets used by this publisher across the catalog. Agents indexing or filtering the catalog should treat these as the authoritative value space for the named fields. Adding a value requires updating this block and republishing.",
+    "families": ["handbags", "small_leather_goods"],
+    "product_types": [
+      "structured_tote",
+      "crossbody_shoulder_convertible",
+      "backpack",
+      "bifold_wallet",
+      "card_holder",
+      "pen_accessory_case"
+    ],
+    "fits": [
+      "13_inch_laptop",
+      "15_inch_laptop",
+      "a4_documents",
+      "water_bottle",
+      "phone_up_to_17cm",
+      "small_wallet",
+      "keys",
+      "compact_camera"
+    ]
+  },
+  "products": [
+    {
+      "sku": "VN-HB-001",
+      "name": "Tote Firenze",
+      "family": "handbags",
+      "type": "structured_tote",
+      "description": "Structured full-grain cowhide tote for daily professional use; sized to carry a 13-inch laptop with A4 documents and accessories.",
+      "material": {
+        "leather": "Tuscan vegetable-tanned cowhide",
+        "grain": "full-grain"
+      },
+      "colors": ["Cognac", "Black", "Forest Green", "Burgundy"],
+      "dimensions_cm": { "width": 38, "height": 30, "depth": 14 },
+      "weight_kg": 1.1,
+      "compartments": { "main": 1, "zipped": 1, "open_slip": 2 },
+      "strap": {
+        "style": "single_shoulder",
+        "adjustable": false,
+        "removable": false,
+        "drop_cm": 22
+      },
+      "hardware": { "material": "brass", "finish": "antique" },
+      "occasion_fit": "Daily professional use",
+      "fits": ["13_inch_laptop", "a4_documents", "water_bottle"],
+      "care": "Conditioner application recommended every 6 months",
+      "lifetime_repair_for_original_purchaser": true
+    },
+    {
+      "sku": "VN-HB-002",
+      "name": "Borsa Lucia",
+      "family": "handbags",
+      "type": "crossbody_shoulder_convertible",
+      "description": "Compact lambskin bag that converts between crossbody and shoulder wear; intended for day-to-evening use with phone, small wallet, and keys.",
+      "material": {
+        "leather": "Tuscan vegetable-tanned lambskin",
+        "interior_finish": "suede"
+      },
+      "colors": ["Cognac", "Black", "Cream", "Navy"],
+      "dimensions_cm": { "width": 26, "height": 18, "depth": 9 },
+      "weight_kg": 0.65,
+      "compartments": { "main": 1, "zipped": 1, "card_slots": 1 },
+      "strap": {
+        "style": "adjustable_crossbody",
+        "adjustable": true,
+        "removable": true,
+        "length_cm_min": 45,
+        "length_cm_max": 110
+      },
+      "hardware": { "material": "brass", "finish": "polished" },
+      "occasion_fit": "Day to evening transition",
+      "fits": ["phone_up_to_17cm", "small_wallet", "keys"],
+      "care": "Conditioner application recommended every 6 months",
+      "lifetime_repair_for_original_purchaser": true
+    },
+    {
+      "sku": "VN-HB-003",
+      "name": "Zaino Vasari",
+      "family": "handbags",
+      "type": "backpack",
+      "description": "Full-grain leather backpack with dedicated 15-inch laptop sleeve and an organized interior; intended for daily commuters and short trips.",
+      "material": {
+        "leather": "Tuscan vegetable-tanned cowhide",
+        "grain": "full-grain"
+      },
+      "colors": ["Cognac", "Black"],
+      "dimensions_cm": { "width": 30, "height": 40, "depth": 13 },
+      "weight_kg": 1.4,
+      "compartments": {
+        "main": 1,
+        "laptop_sleeve_inches": 15,
+        "zipped": 2,
+        "organizer_slots": 3
+      },
+      "strap": {
+        "style": "padded_shoulder_straps",
+        "adjustable": true,
+        "removable": false,
+        "top_carry_handle": true
+      },
+      "hardware": { "material": "brass", "finish": "antique" },
+      "occasion_fit": "Daily commuter use, weekend travel",
+      "fits": ["15_inch_laptop", "water_bottle", "compact_camera"],
+      "care": "Conditioner application recommended every 6 months",
+      "lifetime_repair_for_original_purchaser": true
+    },
+    {
+      "sku": "VN-SLG-001",
+      "name": "Portafoglio Donatello",
+      "family": "small_leather_goods",
+      "type": "bifold_wallet",
+      "description": "Traditional six-card bifold with a bill compartment; everyday wallet in full-grain cowhide.",
+      "material": {
+        "leather": "Tuscan vegetable-tanned cowhide",
+        "grain": "full-grain"
+      },
+      "colors": ["Cognac", "Black", "Burgundy", "Navy"],
+      "dimensions_cm": { "width": 11, "height": 9, "depth": 2 },
+      "compartments": {
+        "card_slots": 6,
+        "receipt_slots": 2,
+        "bill_compartment": 1
+      },
+      "hardware": null,
+      "occasion_fit": "Everyday carry",
+      "lifetime_repair_for_original_purchaser": true
+    },
+    {
+      "sku": "VN-SLG-002",
+      "name": "Porta carte Brunelleschi",
+      "family": "small_leather_goods",
+      "type": "card_holder",
+      "description": "Minimal four-slot card holder produced to order in any cowhide color available in the workshop; suited to minimalist daily carry or a suit pocket.",
+      "material": {
+        "leather": "Tuscan vegetable-tanned cowhide",
+        "grain": "full-grain"
+      },
+      "colors_available_on_request": "any_cowhide_color",
+      "dimensions_cm": { "width": 10, "height": 7, "depth": 0.6 },
+      "compartments": { "card_slots": 4 },
+      "hardware": null,
+      "occasion_fit": "Minimalist daily carry, suit pocket",
+      "lifetime_repair_for_original_purchaser": true
+    },
+    {
+      "sku": "VN-SLG-003",
+      "name": "Astuccio Michelangelo",
+      "family": "small_leather_goods",
+      "type": "pen_accessory_case",
+      "description": "Lambskin sleeve sized for two pens or compact writing accessories; closes with a single brass snap.",
+      "material": {
+        "leather": "Tuscan vegetable-tanned lambskin"
+      },
+      "colors": ["Cognac", "Black"],
+      "dimensions_cm": { "width": 17, "height": 4, "depth": 2 },
+      "closure": "single_brass_snap",
+      "hardware": { "material": "brass", "finish": "polished" },
+      "occasion_fit": "Holds 2 pens or small writing accessories",
+      "lifetime_repair_for_original_purchaser": true
+    }
+  ],
+  "bespoke": {
+    "available": true,
+    "contact_email": "bespoke@vanelli.example",
+    "scope": [
+      "sizing_modifications_to_standard_models",
+      "custom_color_or_leather_combinations",
+      "personalized_embossing_or_hand_stitched_monograms",
+      "single_piece_commissions"
+    ],
+    "lead_time_days_min": 56,
+    "lead_time_days_max": 112,
+    "pricing_model": "on_application",
+    "represented_in_pricing_json": false
+  },
+  "notes": {
+    "lead_times": "Production lead times for in-catalog SKUs are published in /lar/availability.json and may change with workshop load.",
+    "pricing": "Current prices in /lar/pricing.json.",
+    "stock": "Real-time stock in /lar/availability.json.",
+    "descriptions": "Each product's description field carries a short narrative summary for research-mode agents. For full institutional context see /lar/about.md."
+  }
+}
