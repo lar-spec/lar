@@ -1,5 +1,7 @@
 # LAR — Layered Agentic Retrieval
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20544009.svg)](https://doi.org/10.5281/zenodo.20544009)
+
 **A publishing architecture for agent-native web surfaces.**
 
 This repository hosts the open community process for **Layered Agentic Retrieval (LAR)** — a proposed publisher-side architectural pattern for declaring agent-navigable surfaces under an institution's own namespace.
@@ -73,6 +75,18 @@ This repository exists to:
 ## Working paper
 
 Marinoni Moretto, F. (2026). *Layered Agentic Retrieval: A Publishing Architecture for Agent-Native Web Surfaces.* SSRN, May 2026. [ssrn.com/abstract=6801118](https://ssrn.com/abstract=6801118) · [doi.org/10.2139/ssrn.6801118](https://dx.doi.org/10.2139/ssrn.6801118)
+
+## Citing this work
+
+**Working paper (architecture and analysis):**
+
+Marinoni Moretto, F. (2026). *Layered Agentic Retrieval: A Publishing Architecture for Agent-Native Web Surfaces.* SSRN. https://doi.org/10.2139/ssrn.6801118
+
+**Reference implementation (schema and examples):**
+
+Marinoni Moretto, F. (2026). *lar-spec/lar* [Software]. Zenodo. https://doi.org/10.5281/zenodo.20544009
+
+The Zenodo DOI above is the *concept DOI* and always resolves to the latest release. To cite a specific version (e.g., for reproducibility), use the version DOI listed on the Zenodo record page.
 
 ## Repository contents
 
