@@ -12,7 +12,7 @@ This changelog distinguishes two scopes:
 ## [Unreleased]
 
 - README: SSRN paper link added (paper deposited 1 June 2026 — `ssrn.com/abstract=6801118`, DOI `10.2139/ssrn.6801118`).
-- README: Zenodo DOI badge added (concept DOI `10.5281/zenodo.20544009`, resolves to latest release).
+- README: Zenodo DOI badge added (concept DOI `10.5281/zenodo.20544009`, resolves to latest release). Badge image served via `img.shields.io` rather than `zenodo.org/badge/` because GitHub's Camo proxy returns 502 when fetching from Zenodo's badge endpoint; link target (concept DOI) unchanged.
 - README: "Citing this work" section added with formal citations for paper (SSRN) and software (Zenodo).
 
 ## [Unreleased] — pre-release refinements past initial v0.1.0 draft
