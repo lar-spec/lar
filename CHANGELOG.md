@@ -9,6 +9,10 @@ This changelog distinguishes two scopes:
 - **Paper-anchored.** Changes that align with the working paper (currently v4.6, May 2026) at its v0.1 Draft schema scope: three primary concerns (Identity / Current State / Operations) plus optional `catalog`, `policies`, `attestation`.
 - **Exploratory (repo-side refinement past paper).** Schema fields and reference-example patterns the repository accepts that have not yet been folded into the paper. These are marked explicitly and may be revised in subsequent paper versions after community adoption signals load-bearing utility, or revised based on early feedback. Implementers using the repo schema get the full set; readers of the paper get the v0.1 Draft baseline.
 
+## [Unreleased]
+
+- README: SSRN paper link added (paper deposited 1 June 2026 — `ssrn.com/abstract=6801118`, DOI `10.2139/ssrn.6801118`).
+
 ## [Unreleased] — pre-release refinements past initial v0.1.0 draft
 
 ### Schema change — required-property reduction

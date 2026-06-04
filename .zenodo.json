@@ -1,0 +1,28 @@
+{
+  "title": "lar-spec/lar: Layered Agentic Retrieval v0.1",
+  "description": "Specification draft and reference examples for Layered Agentic Retrieval (LAR), a publisher-side architectural pattern for agent-native web surfaces. Companion to working paper deposited on SSRN.",
+  "creators": [
+    {
+      "name": "Marinoni Moretto, Francesco",
+      "orcid": "0009-0004-0096-4712"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "agentic commerce",
+    "agentic web",
+    "agent-mediated retrieval",
+    "web architecture",
+    "knowledge graph",
+    "semantic web",
+    "well-known URI"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.2139/ssrn.6801118",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    }
+  ],
+  "upload_type": "software"
+}
