@@ -189,6 +189,7 @@ LAR is positioned alongside (not replacing) related initiatives in the agentic w
 - **A2A agent cards** — agent identity, different scope from publisher manifest
 - **schema.org / JSON-LD** — entity-level structured data, different organisational principle (see projection note below)
 - **OKF (Open Knowledge Format)** — Google Cloud's markdown-plus-YAML-frontmatter knowledge format (published June 2026) for enterprise knowledge catalogs. Convergent with LAR on the file-based, progressively-disclosed, schema-referencing primitives, on a different consumer axis: enterprise knowledge agents rather than publisher-to-buying agents. Complementary, with no dependency in either direction.
+- **GS1 Digital Link (ISO/IEC 18975:2024)** — resolves a GS1 identifier to a web resource and, through content negotiation, serves a human HTML view and a machine JSON-LD view of the same identifier from one URI. A ratified precedent, at the item-identifier level, for projecting human and machine views from one source; the agent surface generalises the move from the identifier to the institution and its operations.
 
 LAR does not require choosing among these; it specifies the publisher-side institutional declaration layer that can reference any of them.
 
