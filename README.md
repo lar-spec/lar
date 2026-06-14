@@ -188,6 +188,7 @@ LAR is positioned alongside (not replacing) related initiatives in the agentic w
 - **NLWeb** — conversational interface over site content, complementary
 - **A2A agent cards** — agent identity, different scope from publisher manifest
 - **schema.org / JSON-LD** — entity-level structured data, different organisational principle (see projection note below)
+- **OKF (Open Knowledge Format)** — Google Cloud's markdown-plus-YAML-frontmatter knowledge format (published June 2026) for enterprise knowledge catalogs. Convergent with LAR on the file-based, progressively-disclosed, schema-referencing primitives, on a different consumer axis: enterprise knowledge agents rather than publisher-to-buying agents. Complementary, with no dependency in either direction.
 
 LAR does not require choosing among these; it specifies the publisher-side institutional declaration layer that can reference any of them.
 
