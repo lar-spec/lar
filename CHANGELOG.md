@@ -11,9 +11,13 @@ This changelog distinguishes two scopes:
 
 ## [Unreleased]
 
-- README: SSRN paper link added (paper deposited 1 June 2026 — `ssrn.com/abstract=6801118`, DOI `10.2139/ssrn.6801118`).
+- README: SSRN paper link added (paper made public on SSRN 1 June 2026 (written 19 May 2026) — `ssrn.com/abstract=6801118`, DOI `10.2139/ssrn.6801118`).
 - README: Zenodo DOI badge added (concept DOI `10.5281/zenodo.20544009`, resolves to latest release). Badge image served via `img.shields.io` rather than `zenodo.org/badge/` because GitHub's Camo proxy returns 502 when fetching from Zenodo's badge endpoint; link target (concept DOI) unchanged.
 - README: "Citing this work" section added with formal citations for paper (SSRN) and software (Zenodo).
+- README: OKF (Open Knowledge Format, Google Cloud, June 2026) added to "Relationship to adjacent work" as a convergent, different-axis knowledge format (enterprise knowledge catalog vs publisher-to-buying-agent commerce). No priority or endorsement claim.
+- README: GS1 Digital Link (ISO/IEC 18975:2024) added to "Relationship to adjacent work" as a ratified precedent for projecting human and machine views from one identifier.
+- README: "Layered" terminology note extended to disambiguate LAR (producer-side surface) from consumer-side "agentic / multi-layer retrieval" (agentic RAG; Agentic-R, Liu et al. 2026, arXiv:2601.11888).
+- README: SSRN posting date stated precisely as "public 1 June 2026 (written 19 May 2026)" (was "May 2026"); CHANGELOG line aligned.
 
 ## [Unreleased] — pre-release refinements past initial v0.1.0 draft
 

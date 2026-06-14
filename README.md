@@ -74,7 +74,7 @@ This repository exists to:
 
 ## Working paper
 
-Marinoni Moretto, F. (2026). *Layered Agentic Retrieval: A Publishing Architecture for Agent-Native Web Surfaces.* SSRN, May 2026. [ssrn.com/abstract=6801118](https://ssrn.com/abstract=6801118) · [doi.org/10.2139/ssrn.6801118](https://dx.doi.org/10.2139/ssrn.6801118)
+Marinoni Moretto, F. (2026). *Layered Agentic Retrieval: A Publishing Architecture for Agent-Native Web Surfaces.* SSRN, public 1 June 2026 (written 19 May 2026). [ssrn.com/abstract=6801118](https://ssrn.com/abstract=6801118) · [doi.org/10.2139/ssrn.6801118](https://dx.doi.org/10.2139/ssrn.6801118)
 
 ## Citing this work
 
