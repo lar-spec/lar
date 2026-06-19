@@ -1,8 +1,8 @@
 {
   "lar_version": "0.1",
   "publisher": {
-    "name": "LAR Specification Working Group",
-    "domain": "github.com"
+    "name": "Francesco Marinoni Moretto",
+    "domain": "lar.md"
   },
   "identity": "/README.md",
   "context": {

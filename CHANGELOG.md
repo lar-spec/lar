@@ -27,7 +27,7 @@ This changelog distinguishes two scopes:
 
 ### Self-demonstrating root surface
 
-- **`/lar.json` at the repository root** — the repository now exposes its own LAR manifest. The publisher is the LAR Specification Working Group; `identity` points to the README; `context` declares the specification artifacts (schema, changelog, contributing guide, both reference examples); `operations` is empty (the repo authorises no transactions); `policies` declares the license and the contributing guide. The repository treats its specification artifacts as a publication surface and exposes them through the canonical structure it documents. Eat-your-own-dogfood for the architectural claim.
+- **`/lar.json` at the repository root** — the repository now exposes its own LAR manifest. The publisher is Francesco Marinoni Moretto; `identity` points to the README; `context` declares the specification artifacts (schema, changelog, contributing guide, both reference examples); `operations` is empty (the repo authorises no transactions); `policies` declares the license and the contributing guide. The repository treats its specification artifacts as a publication surface and exposes them through the canonical structure it documents. Eat-your-own-dogfood for the architectural claim.
 - **`/llms.txt` at the repository root** — the discovery index pointing to the canonical artifacts and to `/lar.json`. Follows the llms.txt convention as the cross-reference discovery mechanism the repository advocates in the README's Discovery section.
 
 ### Exploratory schema additions (past paper v4.6)

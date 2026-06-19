@@ -28,25 +28,33 @@ A few terms recur with deliberate distinction in the working paper and this repo
 
 ## Architecture
 
-An LAR surface declares three layers of concern under the institution's own namespace. These three are the architectural backbone the working paper anchors at v4.6 (v0.1 Draft schema scope):
+An LAR surface is read as a short stack: each layer conditions the agent's standing to rely on the next.
+
+**Discovery is the precondition, not a layer.** Before anything is read, the agent has to find the manifest. Three complementary mechanisms do that (see [Discovery](#discovery) below): the well-known URI `/.well-known/lar.json`, a `LAR:` directive in `robots.txt`, and a `<link rel="lar">` in the HTML head. Once found, the manifest is read top to bottom.
+
+### Core (always present)
+
+Identity → Current State → Operations, with `policies` governing the operations.
 
 **Identity.** What the institution is and what it stands for: legal entity, mission, certifications, taxonomies, and the policies (return, shipping, privacy, citation, access) that govern operations. Stable; lives well in markdown and structured static files.
 
-**Current state.** What the institution offers right now: inventory, availability, pricing, schedule, paywall status, capacity, live campaign progress. Medium follows volatility — static JSON when data refreshes daily or weekly, API endpoints when it refreshes by the hour or minute. Every volatile file in the reference examples carries `as_of` + `freshness_window_minutes` so agents know when to refetch.
+**Current State.** What the institution offers right now: inventory, availability, pricing, schedule, paywall status, capacity, live campaign progress. Medium follows volatility — static JSON when data refreshes daily or weekly, API endpoints when it refreshes by the hour or minute. Volatile files in the reference examples carry `as_of` + `freshness_window_minutes` so agents know when to refetch.
 
 **Operations.** What an agent can do via the surface: purchase, subscribe, cite, reserve, donate, apply, access. Each declared operation is bound to an endpoint under a stated protocol — `ACP`, `UCP`, `MCP`, `WebMCP`, `A2A`, `OpenAPI`, `Proprietary`, or `Other`.
 
-The three concerns are concerns, not files. A simple publisher exposes them as branches of a single static tree; a publisher at scale exposes Identity as static markdown, Current State as named API endpoints, Operations as a declarative section in `lar.json` enumerating endpoints with their protocol bindings. Same architecture, different operational shape.
+These are concerns, not files. A simple publisher exposes them as branches of a single static tree; a publisher at scale exposes Identity as static markdown, Current State as named API endpoints, and Operations as a declarative section in `lar.json` enumerating endpoints with their protocol bindings. Same architecture, different operational shape.
 
-### Exploratory blocks past paper v4.6
+### Trust (experimental, optional)
 
-The repository schema also accepts three optional blocks demonstrated in the reference examples — exploratory extensions past the v4.6 paper. They may be folded into a future paper revision after community adoption signals load-bearing utility, or revised based on early feedback. Implementers using the repo schema get the full set (three primary + three exploratory); readers of the working paper v4.6 get the three primary as the architectural baseline.
+The layer an agent consults to decide whether to rely on Core at all. Both pieces are early; most publishers carry neither today.
 
-**Context.** Supplementary narrative leaves for research-mode agent queries the structured leaves cannot answer cleanly. Demonstrated in both worked examples — Vanelli uses `catalog_overview` and `craft_and_materials`; restauro uses `programs_overview` and `impact_reporting`. The `context` block in the manifest carries arbitrary publisher-chosen lowercase-snake-case keys pointing to these leaves.
+**Validators.** Third-party trust anchors (registries, qualifications, audits, oversight bodies) declared inline so an agent can cross-check the publisher's self-declaration against authorities. Demonstrated in the restauro example for RUNTS, ETS qualification, annual audit, Soprintendenza oversight, and civic board appointee. For US nonprofits this typically points to Candid, Charity Navigator, or IRS records; for European nonprofits to national registries (RUNTS, Charity Commission, RNA, ANBI); for commerce publishers to LEI, GS1 GLN, or consortium memberships. For the standard commerce case `publisher.legal_entity_id` covers the equivalent function, so Vanelli does not use this block.
 
-**Impact.** Structured per-program or per-project effectiveness data, distinct from compliance or financial data. Demonstrated in the restauro nonprofit example as `impact.json` with per-outcome `verification_status` and `evidence_quality` declarations and a `what_this_file_does_not_claim` block surfacing the boundaries of the claims. Typically omitted by commerce publishers.
+**Attestation.** A cryptographic signature over the manifest. Documented as **experimental**: LAR v0.1 does not yet specify a trust model, signing scope, or revocation semantics, and the worked examples carry a placeholder signature for shape illustration only (see the Status section below).
 
-**Validators.** Third-party trust anchors (registries, qualifications, audits, oversight bodies) declared inline in the manifest so agents resolve them at first fetch. Demonstrated in the restauro example for RUNTS, ETS qualification, annual audit, Soprintendenza oversight, and civic board appointee. Anchors the publisher's self-declaration against authorities an agent can cross-check. For US nonprofits this would typically point to Candid, Charity Navigator, IRS records; for European nonprofits to RUNTS, Charity Commission, RNA, ANBI; for commerce publishers to LEI, GS1 GLN, consortium memberships. Vanelli does not currently use this block — for the standard commerce case `publisher.legal_entity_id` covers the equivalent function.
+### Domain extensions (optional, namespaced)
+
+Sector-specific leaves that must not redefine Core or Trust: `catalog` (commerce), `context` (knowledge-heavy publishers), `impact` (nonprofits). Demonstrated in the worked examples — Vanelli uses `catalog` plus `context` leaves (`catalog_overview`, `craft_and_materials`); restauro uses `context` (`programs_overview`, `impact_reporting`) and `impact` (`impact.json` with per-outcome `verification_status` and `evidence_quality` declarations and a `what_this_file_does_not_claim` block surfacing the boundaries of the claims). `catalog` is paper-anchored; `context` and `impact` are exploratory extensions past the working paper's v4.6 baseline. Implementers using the repo schema get the full set; readers of the working paper v4.6 get Core as the architectural baseline. The exploratory blocks may be folded into a future paper revision after community adoption signals load-bearing utility, or revised based on early feedback.
 
 ## The discipline
 
@@ -226,4 +234,4 @@ ORCID: [0009-0004-0096-4712](https://orcid.org/0009-0004-0096-4712)
 
 ## Self-demonstrating surface
 
-This repository exposes its own specification artifacts as a (documentation-focused) LAR surface. The canonical structure is at [/lar.json](lar.json) with the discovery index at [/llms.txt](llms.txt). The repository is its own first reference example: it eats its own dogfood for the architectural claim it proposes. A dedicated domain (`lar.md`) has been reserved for the project; if and when it is activated as a live publication surface, the manifest's `domain` field will be updated accordingly. Until then, the canonical specification artifacts live here under the `github.com/lar-spec/lar` namespace, and the repo's root manifest serves both as documentation source-of-truth and as a working example of a documentation-publisher LAR surface.
+This repository exposes its own specification artifacts as a (documentation-focused) LAR surface. The canonical structure is at [/lar.json](lar.json) with the discovery index at [/llms.txt](llms.txt). The repository is its own first reference example: it eats its own dogfood for the architectural claim it proposes. The project's domain, [lar.md](https://lar.md), is now live and is itself a LAR surface: its manifest is curl-able at [`https://lar.md/.well-known/lar.json`](https://lar.md/.well-known/lar.json), published with `publisher.domain` set to `lar.md`. The repository's specification artifacts remain under the `github.com/lar-spec/lar` namespace and serve as documentation source-of-truth; the repo's root manifest names the same publisher (`Francesco Marinoni Moretto`, `lar.md`) and stands as a working example of a documentation-publisher LAR surface.
