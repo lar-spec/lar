@@ -9,6 +9,18 @@ This changelog distinguishes two scopes:
 - **Paper-anchored.** Changes that align with the working paper (currently v4.6, May 2026) at its v0.1 Draft schema scope: three primary concerns (Identity / Current State / Operations) plus optional `catalog`, `policies`, `attestation`.
 - **Exploratory (repo-side refinement past paper).** Schema fields and reference-example patterns the repository accepts that have not yet been folded into the paper. These are marked explicitly and may be revised in subsequent paper versions after community adoption signals load-bearing utility, or revised based on early feedback. Implementers using the repo schema get the full set; readers of the paper get the v0.1 Draft baseline.
 
+## [0.1.3] — 2026-07-27 — the working paper becomes reachable from this repository
+
+No specification, schema, or reference-example changes. The working paper is now deposited open access on Zenodo (PDF and Markdown, text verified character-identical to the SSRN version, concept DOI `10.5281/zenodo.21622424`), and this repository's three agent-facing surfaces were still pointing at the login-walled SSRN landing page, or at nothing.
+
+- `/lar.json`: `context` gained `working_paper` (the full text, one hop, no HTML parsing) and `working_paper_doi` (the citable concept DOI). The manifest previously did not mention the paper at all, although the repository exists to implement it.
+- **The text is served from `lar.md`, not from the archive.** The first attempt pointed `working_paper` at the Markdown file on zenodo.org. In the field that failed for the consumers it exists for: an agent following the chain reached the declaration and could not fetch the content, because Zenodo's anti-abuse layer restricts shared and cloud IP ranges — the networks agent fleets run on. Verified: the same URL returned 200 to a bot user-agent from a clean address and 504 from a rate-limited one, and `zenodo.org/robots.txt` itself returned 403 "unusual traffic from your network" during testing. A declared leaf on a third-party domain inherits that domain's availability posture, which the publisher neither controls nor observes; the paper's §6 says deeper material is held "within the publisher's own namespace." Zenodo stays canonical and citable via `working_paper_doi`; the reference surface serves the bytes. The trade is version drift, which the publisher can see and manage.
+- `llms.txt`: the "Working paper" entry linked a README anchor rather than the paper. It now links the full text in Markdown, with the citable record beside it.
+- `README.md`: the "Working paper" and "Citing this work" sections lead with the open-access Zenodo record and name SSRN as the identical-text deposit, rather than citing only the venue a reader may not be able to open.
+- `.zenodo.json`: `related_identifiers` now declares `isSupplementTo` the paper's Zenodo DOI as well as its SSRN DOI, so the software-to-paper relation resolves within Zenodo. Description updated to match. *(Takes effect on this release, when Zenodo reads the file.)*
+
+The reference surface at lar.md was updated the same day: it now hosts `/lar/working-paper.md` and declares it from its own manifest, its `llms.txt`, and `about.md`.
+
 ## [0.1.2] — 2026-07-27 — documentation and metadata only
 
 No specification, schema, or reference-example changes. This release exists so the archived artifact carries the current documentation; implementers on 0.1.1 need change nothing.

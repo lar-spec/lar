@@ -4,7 +4,8 @@
 
 ## Working paper
 
-- [Marinoni Moretto (2026), v4.6 working paper](https://github.com/lar-spec/lar/blob/main/README.md#working-paper): the architectural claim and v0.1 baseline scope
+- [Marinoni Moretto (2026), full text in Markdown](https://lar.md/lar/working-paper.md): the architectural claim and v0.1 baseline scope, served as text/markdown from the reference surface, no rendering pipeline and no third-party rate limit in the way. The Appendix A.1 manifest schema in it parses as valid JSON.
+- [Citable record](https://doi.org/10.5281/zenodo.21622424): open access, PDF and Markdown, CC BY-SA 4.0. Concept DOI, always resolves to the latest version. Text identical to the SSRN deposit (`10.2139/ssrn.6801118`).
 
 ## Specification
 

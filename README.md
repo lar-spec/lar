@@ -82,19 +82,24 @@ This repository exists to:
 
 ## Working paper
 
-Marinoni Moretto, F. (2026). *Layered Agentic Retrieval: A Publishing Architecture for Agent-Native Web Surfaces.* SSRN, public 1 June 2026 (written 19 May 2026). [ssrn.com/abstract=6801118](https://ssrn.com/abstract=6801118) · [doi.org/10.2139/ssrn.6801118](https://dx.doi.org/10.2139/ssrn.6801118)
+Marinoni Moretto, F. (2026). *Layered Agentic Retrieval: A Publishing Architecture for Agent-Native Web Surfaces.* Public 1 June 2026 (written 19 May 2026). CC BY-SA 4.0.
+
+Open access, PDF and Markdown: [doi.org/10.5281/zenodo.21622424](https://doi.org/10.5281/zenodo.21622424) · [full text in Markdown](https://lar.md/lar/working-paper.md), served from the reference surface.
+Also deposited on SSRN, identical text: [doi.org/10.2139/ssrn.6801118](https://dx.doi.org/10.2139/ssrn.6801118)
 
 ## Citing this work
 
 **Working paper (architecture and analysis):**
 
-Marinoni Moretto, F. (2026). *Layered Agentic Retrieval: A Publishing Architecture for Agent-Native Web Surfaces.* SSRN. https://doi.org/10.2139/ssrn.6801118
+Marinoni Moretto, F. (2026). *Layered Agentic Retrieval: A Publishing Architecture for Agent-Native Web Surfaces.* Zenodo. https://doi.org/10.5281/zenodo.21622424
+
+Also deposited on SSRN with identical text: https://doi.org/10.2139/ssrn.6801118
 
 **Reference implementation (schema and examples):**
 
 Marinoni Moretto, F. (2026). *lar-spec/lar* [Software]. Zenodo. https://doi.org/10.5281/zenodo.20544009
 
-The Zenodo DOI above is the *concept DOI* and always resolves to the latest release. To cite a specific version (e.g., for reproducibility), use the version DOI listed on the Zenodo record page.
+Both Zenodo DOIs above are *concept DOIs* and always resolve to the latest release. To cite a specific version (e.g., for reproducibility), use the version DOI listed on the Zenodo record page.
 
 ## Repository contents
 

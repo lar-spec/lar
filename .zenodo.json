@@ -1,6 +1,6 @@
 {
   "title": "lar-spec/lar: Layered Agentic Retrieval v0.1",
-  "description": "Specification draft and reference examples for Layered Agentic Retrieval (LAR), a publisher-side architectural pattern for agent-native web surfaces. Companion to working paper deposited on SSRN.",
+  "description": "Specification draft and reference examples for Layered Agentic Retrieval (LAR), a publisher-side architectural pattern for agent-native web surfaces. Companion to the working paper, deposited open access on Zenodo (10.5281/zenodo.21622424) and on SSRN (10.2139/ssrn.6801118, identical text).",
   "creators": [
     {
       "name": "Marinoni Moretto, Francesco",
@@ -18,6 +18,11 @@
     "well-known URI"
   ],
   "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.21622424",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    },
     {
       "identifier": "10.2139/ssrn.6801118",
       "relation": "isSupplementTo",

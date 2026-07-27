@@ -7,6 +7,8 @@
   "identity": "/README.md",
   "context": {
     "specification": "/schemas/lar.schema.json",
+    "working_paper": "https://lar.md/lar/working-paper.md",
+    "working_paper_doi": "https://doi.org/10.5281/zenodo.21622424",
     "changelog": "/CHANGELOG.md",
     "contributing": "/CONTRIBUTING.md",
     "ecommerce_example": "/examples/ecommerce/vanelli/README.md",
