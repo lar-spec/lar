@@ -9,17 +9,26 @@ This changelog distinguishes two scopes:
 - **Paper-anchored.** Changes that align with the working paper (currently v4.6, May 2026) at its v0.1 Draft schema scope: three primary concerns (Identity / Current State / Operations) plus optional `catalog`, `policies`, `attestation`.
 - **Exploratory (repo-side refinement past paper).** Schema fields and reference-example patterns the repository accepts that have not yet been folded into the paper. These are marked explicitly and may be revised in subsequent paper versions after community adoption signals load-bearing utility, or revised based on early feedback. Implementers using the repo schema get the full set; readers of the paper get the v0.1 Draft baseline.
 
-## [Unreleased]
+## [0.1.2] — 2026-07-27 — documentation and metadata only
 
-- README: SSRN paper link added (paper made public on SSRN 1 June 2026 (written 19 May 2026) — `ssrn.com/abstract=6801118`, DOI `10.2139/ssrn.6801118`).
-- README: Zenodo DOI badge added (concept DOI `10.5281/zenodo.20544009`, resolves to latest release). Badge image served via `img.shields.io` rather than `zenodo.org/badge/` because GitHub's Camo proxy returns 502 when fetching from Zenodo's badge endpoint; link target (concept DOI) unchanged.
-- README: "Citing this work" section added with formal citations for paper (SSRN) and software (Zenodo).
-- README: OKF (Open Knowledge Format, Google Cloud, June 2026) added to "Relationship to adjacent work" as a convergent, different-axis knowledge format (enterprise knowledge catalog vs publisher-to-buying-agent commerce). No priority or endorsement claim.
-- README: GS1 Digital Link (ISO/IEC 18975:2024) added to "Relationship to adjacent work" as a ratified precedent for projecting human and machine views from one identifier.
-- README: "Layered" terminology note extended to disambiguate LAR (producer-side surface) from consumer-side "agentic / multi-layer retrieval" (agentic RAG; Agentic-R, Liu et al. 2026, arXiv:2601.11888).
-- README: SSRN posting date stated precisely as "public 1 June 2026 (written 19 May 2026)" (was "May 2026"); CHANGELOG line aligned.
+No specification, schema, or reference-example changes. This release exists so the archived artifact carries the current documentation; implementers on 0.1.1 need change nothing.
 
-## [Unreleased] — pre-release refinements past initial v0.1.0 draft
+- README: Zenodo DOI badge added (concept DOI `10.5281/zenodo.20544009`, resolves to latest release). Badge image served via `img.shields.io` rather than `zenodo.org/badge/` because GitHub's Camo proxy returns 502 when fetching from Zenodo's badge endpoint; link target (concept DOI) unchanged. ([439aece](https://github.com/lar-spec/lar/commit/439aece), [be74a6b](https://github.com/lar-spec/lar/commit/be74a6b))
+- README: "Citing this work" section added with formal citations for paper (SSRN) and software (Zenodo). ([439aece](https://github.com/lar-spec/lar/commit/439aece))
+- README: OKF (Open Knowledge Format, Google Cloud, June 2026) added to "Relationship to adjacent work" as a convergent, different-axis knowledge format (enterprise knowledge catalog vs publisher-to-buying-agent commerce). No priority or endorsement claim. ([d6bacae](https://github.com/lar-spec/lar/commit/d6bacae))
+- README: GS1 Digital Link (ISO/IEC 18975:2024) added to "Relationship to adjacent work" as a ratified precedent for projecting human and machine views from one identifier. ([2d30634](https://github.com/lar-spec/lar/commit/2d30634))
+- README: "Layered" terminology note extended to disambiguate LAR (producer-side surface) from consumer-side "agentic / multi-layer retrieval" (agentic RAG; Agentic-R, Liu et al. 2026, arXiv:2601.11888). ([1d7b983](https://github.com/lar-spec/lar/commit/1d7b983))
+- README: SSRN posting date stated precisely as "public 1 June 2026 (written 19 May 2026)" — was "May 2026" — refining the 0.1.1 entry below. ([a205c7e](https://github.com/lar-spec/lar/commit/a205c7e))
+- `/lar.json`: `publisher.name` corrected from "LAR Specification Working Group" to "Francesco Marinoni Moretto", `publisher.domain` from `github.com` to `lar.md`. There is no working group, and the root manifest now points at the live surface, which is itself a LAR surface. README Architecture rewritten to the tiered model used there: Discovery (precondition) → Core (Identity / Current State / Operations + policies) → Trust (Validators + Attestation, experimental) → Domain extensions. The publisher name in the 0.1.0 section below was corrected to match at the same time; the 0.1.0 and 0.1.1 artifacts themselves are unchanged and still carry the original string. ([02c9c6c](https://github.com/lar-spec/lar/commit/02c9c6c))
+
+## [0.1.1] — 2026-06-04 — SSRN link and Zenodo archival metadata
+
+- README: SSRN paper link added (paper made public on SSRN 1 June 2026, written 19 May 2026 — `ssrn.com/abstract=6801118`, DOI `10.2139/ssrn.6801118`). ([ea25662](https://github.com/lar-spec/lar/commit/ea25662))
+- `.zenodo.json` added, enabling the GitHub–Zenodo archival integration that mints the concept DOI. ([ea25662](https://github.com/lar-spec/lar/commit/ea25662))
+
+## Repo-side refinements past paper v4.6 — shipped in [0.1.0] ([37d59c8](https://github.com/lar-spec/lar/commit/37d59c8))
+
+*Not a release of its own. This is the second scope declared at the head of this file: where the repository departs from the paper's Appendix A.1 v0.1 Draft. All of it shipped in the 0.1.0 tag, and it is kept separate from the `[0.1.0]` entry below, which records the paper-anchored scope.*
 
 ### Schema change — required-property reduction
 
@@ -85,8 +94,8 @@ The paper's §6 robots.txt illustration uses `example.com` (RFC 2606 reserved to
 ### Added (paper-anchored v0.1 Draft scope)
 
 - Initial public proposal of the LAR (Layered Agentic Retrieval) specification.
-- JSON Schema (draft-07) for the `lar.json` manifest at [`schemas/lar.schema.json`](schemas/lar.schema.json). Required fields: `lar_version`, `publisher`, `identity`, `current_state`, `operations`. Optional fields (paper-anchored): `catalog`, `policies`, `attestation`.
-- Protocol enumeration for the `operations` block: `ACP`, `UCP`, `MCP`, `Proprietary`. (Expanded subsequently to include `WebMCP`, `A2A`, `OpenAPI`, `Other` — see Unreleased.)
+- JSON Schema (draft-07) for the `lar.json` manifest at [`schemas/lar.schema.json`](schemas/lar.schema.json). Required fields **as specified by the paper**: `lar_version`, `publisher`, `identity`, `current_state`, `operations`. Optional fields (paper-anchored): `catalog`, `policies`, `attestation`. The schema as shipped in this tag already required only the first three — see the repo-side refinements section above.
+- Protocol enumeration for the `operations` block: `ACP`, `UCP`, `MCP`, `Proprietary`. (Expanded subsequently to include `WebMCP`, `A2A`, `OpenAPI`, `Other` — see the repo-side refinements section above.)
 - Apache 2.0 license for code, schema, and examples.
 
 ### Added (reference examples)
