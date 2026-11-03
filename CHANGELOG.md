@@ -9,7 +9,7 @@ This changelog distinguishes two scopes:
 - **Paper-anchored.** Changes that align with the working paper (currently v4.6, May 2026) at its v0.1 Draft schema scope: three primary concerns (Identity / Current State / Operations) plus optional `catalog`, `policies`, `attestation`.
 - **Exploratory (repo-side refinement past paper).** Schema fields and reference-example patterns the repository accepts that have not yet been folded into the paper. These are marked explicitly and may be revised in subsequent paper versions after community adoption signals load-bearing utility, or revised based on early feedback. Implementers using the repo schema get the full set; readers of the paper get the v0.1 Draft baseline.
 
-## [0.1.3] — 2026-07-27 — the working paper becomes reachable from this repository
+## [0.1.3] - 2026-11-04 - the working paper becomes reachable from this repository
 
 No specification, schema, or reference-example changes. The working paper is now deposited open access on Zenodo (PDF and Markdown, text verified character-identical to the SSRN version, concept DOI `10.5281/zenodo.21622424`), and this repository's three agent-facing surfaces were still pointing at the login-walled SSRN landing page, or at nothing.
 
@@ -18,13 +18,10 @@ No specification, schema, or reference-example changes. The working paper is now
 - `llms.txt`: the "Working paper" entry linked a README anchor rather than the paper. It now links the full text in Markdown, with the citable record beside it.
 - `README.md`: the "Working paper" and "Citing this work" sections lead with the open-access Zenodo record and name SSRN as the identical-text deposit, rather than citing only the venue a reader may not be able to open.
 - `.zenodo.json`: `related_identifiers` now declares `isSupplementTo` the paper's Zenodo DOI as well as its SSRN DOI, so the software-to-paper relation resolves within Zenodo. Description updated to match. *(Takes effect on this release, when Zenodo reads the file.)*
-
-The reference surface at lar.md was updated the same day: it now hosts `/lar/working-paper.md` and declares it from its own manifest, its `llms.txt`, and `about.md`.
-
-Added on 4 November 2026, before this version was tagged:
-
 - `/lar.json`: `context` gained `working_paper_ssrn`, the SSRN DOI of the identical-text deposit, beside `working_paper_doi`.
 - README, Status, "Falsifiability": empirical benchmarking against retrofit baselines remains open. The field study announced in the working paper (Marinoni Moretto & Antichi, forthcoming 2026) will not go ahead; the paper's text is unchanged, as its copy here must stay identical to the archival deposit.
+
+The reference surface at lar.md was updated on 27 July 2026: it now hosts `/lar/working-paper.md` and declares it from its own manifest, its `llms.txt`, and `about.md`.
 
 ## [0.1.2] — 2026-07-27 — documentation and metadata only
 

@@ -30,7 +30,7 @@ The structure illustrates the three architectural commitments:
 
 - A complete merchant surface for production use. Real merchants will have larger catalogs, more granular pricing structures, and additional operational endpoints.
 - A normative template. The exact field naming, file organisation, and content structure are illustrative. Different merchants will adapt LAR to their domain.
-- Validated against a deployed agent ecosystem. Empirical validation against retrofit baselines is planned in a forthcoming field study (Marinoni Moretto & Antichi, 2026).
+- Validated against a deployed agent ecosystem. Empirical validation against retrofit baselines remains open; the field study announced in the working paper (Marinoni Moretto & Antichi) will not go ahead.
 
 ## Cross-file conventions used here
 
