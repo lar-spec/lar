@@ -21,6 +21,11 @@ No specification, schema, or reference-example changes. The working paper is now
 
 The reference surface at lar.md was updated the same day: it now hosts `/lar/working-paper.md` and declares it from its own manifest, its `llms.txt`, and `about.md`.
 
+Added on 4 November 2026, before this version was tagged:
+
+- `/lar.json`: `context` gained `working_paper_ssrn`, the SSRN DOI of the identical-text deposit, beside `working_paper_doi`.
+- README, Status, "Falsifiability": empirical benchmarking against retrofit baselines remains open. The field study announced in the working paper (Marinoni Moretto & Antichi, forthcoming 2026) will not go ahead; the paper's text is unchanged, as its copy here must stay identical to the archival deposit.
+
 ## [0.1.2] — 2026-07-27 — documentation and metadata only
 
 No specification, schema, or reference-example changes. This release exists so the archived artifact carries the current documentation; implementers on 0.1.1 need change nothing.
